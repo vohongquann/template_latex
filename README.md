@@ -49,6 +49,8 @@ standalone/           appendix_standalone.tex: the appendix alone, built separat
 build/                Generated PDF and temp files (git-ignored)
 ```
 
+For a full tour of the report folder, see [`report/README.md`](report/README.md).
+
 ## File-by-file guide
 
 Every file starts with a comment box that says what it is, what to replace and how. The short version:
