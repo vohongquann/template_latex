@@ -1,0 +1,85 @@
+% ======================================================================
+% 12_results.tex: CHAPTER 5, results
+% WHAT TO WRITE
+%   Final results (for example on the real system), compared with the goals and with other work.
+%   If your report has no separate results chapter, delete this file and its \include line in main.tex.
+%
+% HOW TO USE THIS FILE
+%   - Replace every ... with your text. A new paragraph starts after one blank line.
+%   - The title in \chapter{...} is printed as "CHAPTER n: TITLE" in capitals. Rename it freely.
+%   - \section{...} and \subsection{...} are numbered automatically (1.1, 1.1.1). Rename, copy or delete them.
+%   - \paragraph{Small heading:} gives a bold line of its own (the colon is required).
+%   - The last section ("Template Examples") shows a figure, an equation and a table. Copy a block into your
+%     text, edit it, then delete the "Template Examples" section when you no longer need it.
+%   - Syntax for everything (lists, figures, tables, equations, citations): docs/LATEX_CHEATSHEET.md
+%   - Labels (\label{...}) must be unique across the whole report.
+% ======================================================================
+
+\chapter{RESULTS}
+\label{chap:results}
+
+\section{Results on the Real System}
+...
+
+\subsection{Setup}
+...
+
+\subsection{Measurements}
+...
+
+\section{Comparison and Analysis}
+...
+
+% ============================================================
+% Template examples: copy these blocks into the relevant subsection.
+% Replace placeholder text, captions, labels, and sample data as needed.
+% ============================================================
+\section{Template Examples}
+\label{sec:template-ch5-results}
+
+\subsection{Figure and Cross-Reference Example}
+...
+
+Figure~\ref{fig:template-ch5-results} illustrates ...
+\begin{figure}[htbp]
+    \centering
+    % Replace the framed placeholder with your image, for example:
+    % \includegraphics[width=0.75\linewidth]{figures/example.png}
+    \fbox{%
+        \begin{minipage}[c][4cm][c]{0.75\linewidth}
+            \centering
+            ...
+        \end{minipage}%
+    }
+    \caption{...}
+    \label{fig:template-ch5-results}
+\end{figure}
+
+\subsection{Equation Example}
+...
+
+An example relationship is given in Equation~\eqref{eq:template-ch5-results}:
+\begin{equation}
+    y(t) = a\,x(t) + b,
+    \label{eq:template-ch5-results}
+\end{equation}
+where $x(t)$ is the input, $y(t)$ is the output, and $a$ and $b$ are
+example coefficients. Replace this relationship and its definitions with ...
+
+\subsection{Table Example}
+...
+
+Table~\ref{tab:template-ch5-results} presents ...
+\begin{table}[htbp]
+    \centering
+    \caption{...}
+    \label{tab:template-ch5-results}
+    \begin{tabularx}{0.9\linewidth}{lXX}
+        \toprule
+        \textbf{Item} & \textbf{Description} & \textbf{Value / Unit} \\
+        \midrule
+        ... & ... & ... \\
+        ... & ... & ... \\
+        \bottomrule
+    \end{tabularx}
+\end{table}

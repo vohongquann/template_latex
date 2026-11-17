@@ -1,0 +1,31 @@
+% ======================================================================
+% 15_appendix.tex: appendix
+% HOW TO USE
+%   - Switch it on with  withappendix = true  in info.txt (off by default). It is placed after the references.
+%   - Replace "APPENDIX \thechapter: ..." in the two places below with the appendix title (the first one is the
+%     table-of-contents entry, the second is the heading on the page).
+%   - Use \section for parts. Put long tables, extra figures, code or data here instead of the main chapters.
+% ======================================================================
+
+\appendix
+\refstepcounter{chapter}
+\addcontentsline{toc}{chapter}{APPENDIX \thechapter: ...}
+\markboth{APPENDIX \thechapter}{}
+\label{app:example}
+
+\begin{center}
+    {\fontsize{16pt}{18pt}\selectfont\bfseries APPENDIX \thechapter: ...}
+\end{center}
+\vspace{1cm}
+
+\section{...}
+...
+
+\section{...}
+Figure~\ref{fig:appendix-example} is an example figure in the appendix.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/example_appendix.png}
+    \caption{...}
+    \label{fig:appendix-example}
+\end{figure}

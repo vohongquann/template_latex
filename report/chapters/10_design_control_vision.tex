@@ -1,0 +1,135 @@
+% ======================================================================
+% 10_design_control_vision.tex: CHAPTER 3, design and implementation
+% WHAT TO WRITE
+%   Requirements, overall architecture, then each part in detail (hardware, software, algorithms, parameters).
+%   This is usually the longest chapter: use many \subsection and \paragraph headings to keep it readable.
+%   Show block diagrams as figures and parameter lists as tables.
+%   "Side-by-Side Figures" shows two related pictures next to each other with a caption each.
+%
+% HOW TO USE THIS FILE
+%   - Replace every ... with your text. A new paragraph starts after one blank line.
+%   - The title in \chapter{...} is printed as "CHAPTER n: TITLE" in capitals. Rename it freely.
+%   - \section{...} and \subsection{...} are numbered automatically (1.1, 1.1.1). Rename, copy or delete them.
+%   - \paragraph{Small heading:} gives a bold line of its own (the colon is required).
+%   - The last section ("Template Examples") shows a figure, an equation and a table. Copy a block into your
+%     text, edit it, then delete the "Template Examples" section when you no longer need it.
+%   - Syntax for everything (lists, figures, tables, equations, citations): docs/LATEX_CHEATSHEET.md
+%   - Labels (\label{...}) must be unique across the whole report.
+% ======================================================================
+
+\chapter{SYSTEM DESIGN AND IMPLEMENTATION}
+\label{chap:design}
+
+\section{System Requirements}
+...
+
+\subsection{Functional requirements}
+...
+
+\subsection{Technical specifications}
+...
+
+\section{Architecture}
+...
+
+\subsection{Overall architecture}
+...
+
+\subsection{Block diagram}
+...
+
+\section{Detailed Design}
+\subsection{Component A}
+...
+
+\paragraph{Sub-topic one:}
+...
+
+\paragraph{Sub-topic two:}
+...
+
+\subsection{Component B}
+...
+
+\subsection{Side-by-Side Figures}
+Two related figures placed side by side (Figure~\ref{fig:side-a} and Figure~\ref{fig:side-b}):
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/example_a.png}
+        \caption{...}
+        \label{fig:side-a}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/example_b.png}
+        \caption{...}
+        \label{fig:side-b}
+    \end{subfigure}
+    \caption{...}
+    \label{fig:side-by-side}
+\end{figure}
+
+\section{Implementation}
+...
+
+\subsection{Hardware or software setup}
+...
+
+\subsection{Procedure}
+...
+
+% ============================================================
+% Template examples: copy these blocks into the relevant subsection.
+% Replace placeholder text, captions, labels, and sample data as needed.
+% ============================================================
+\section{Template Examples}
+\label{sec:template-ch3-design-control-vision}
+
+\subsection{Figure and Cross-Reference Example}
+...
+
+Figure~\ref{fig:template-ch3-design-control-vision} illustrates ...
+\begin{figure}[htbp]
+    \centering
+    % Replace the framed placeholder with your image, for example:
+    % \includegraphics[width=0.75\linewidth]{figures/example.png}
+    \fbox{%
+        \begin{minipage}[c][4cm][c]{0.75\linewidth}
+            \centering
+            ...
+        \end{minipage}%
+    }
+    \caption{...}
+    \label{fig:template-ch3-design-control-vision}
+\end{figure}
+
+\subsection{Equation Example}
+...
+
+An example relationship is given in Equation~\eqref{eq:template-ch3-design-control-vision}:
+\begin{equation}
+    y(t) = a\,x(t) + b,
+    \label{eq:template-ch3-design-control-vision}
+\end{equation}
+where $x(t)$ is the input, $y(t)$ is the output, and $a$ and $b$ are
+example coefficients. Replace this relationship and its definitions with ...
+
+\subsection{Table Example}
+...
+
+Table~\ref{tab:template-ch3-design-control-vision} presents ...
+\begin{table}[htbp]
+    \centering
+    \caption{...}
+    \label{tab:template-ch3-design-control-vision}
+    \begin{tabularx}{0.9\linewidth}{lXX}
+        \toprule
+        \textbf{Item} & \textbf{Description} & \textbf{Value / Unit} \\
+        \midrule
+        ... & ... & ... \\
+        ... & ... & ... \\
+        \bottomrule
+    \end{tabularx}
+\end{table}

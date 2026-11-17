@@ -1,0 +1,80 @@
+% !TeX program = xelatex
+% !TeX root = main.tex
+% ======================================================================
+% main.tex: the order of the document. You rarely need to edit it.
+% BUILD:   latexmk   (in this folder; the PDF is build/main.pdf). See ../INSTALL.md.
+% WHERE TO EDIT
+%   info.txt            names, title, dates, options (cover, commitment page, PDF properties)
+%   frontmatter/*.tex   covers, acknowledgments, commitment, abstracts, abbreviations
+%   chapters/*.tex      the chapters (this is where you write)
+%   backmatter/*.tex    references and appendix
+%   figures/            images
+%   config/00_preamble.tex   fonts, margins, spacing, heading styles (change the look of the whole report)
+% HOW TO
+%   Add a chapter     : create chapters/14_name.tex starting with \chapter{TITLE}, then add
+%                       \include{chapters/14_name} among the \include lines below, in reading order.
+%   Remove a chapter  : delete its \include line (you can keep or delete the file).
+%   Reorder chapters  : reorder the \include lines. File numbers (08_, 09_ ...) are only for sorting.
+%   Remove a front-matter page (e.g. abbreviations): delete its \input line.
+%   Always keep \documentclass, \input{config/...}, \begin{document} and \end{document}.
+% ======================================================================
+
+% !TeX program = xelatex
+% !TeX root = main.tex
+% ======================================================================
+% main.tex: order of the document. Names and dates are in info.txt,
+% formatting is in config/00_preamble.tex, content is in the folders.
+% ======================================================================
+
+\documentclass[12pt]{report}
+\input{config/info_reader}      % reads info.txt
+\input{config/00_preamble}
+
+\begin{document}
+
+% ---------------------------------------------------------------- Covers
+\input{frontmatter/01_titlepage}        % hard cover
+\newpage\thispagestyle{empty}\mbox{}\newpage   % blank page
+\input{frontmatter/01_titlepage}        % soft cover
+
+% ---------------------------------------------------------------- Front matter (roman numerals)
+\pagenumbering{roman}
+
+% Scanned assignment sheet: file and title set in info.txt, skipped if the file is missing.
+\IfFileExists{\assignmentpdf}{%
+  \phantomsection
+  \addcontentsline{toc}{chapter}{\assignmenttitle}
+  \includepdf[pages=1, fitpaper=false, scale=0.95, pagecommand={\thispagestyle{fancy}}]{\assignmentpdf}%
+}{}
+
+\input{frontmatter/02_acknowledgments}
+\input{frontmatter/03_commitment}
+\input{frontmatter/04_summary_vi}       % Vietnamese summary
+\input{frontmatter/05_abstract_en}      % English abstract
+
+\addcontentsline{toc}{chapter}{TABLE OF CONTENTS}
+\tableofcontents
+\newpage
+
+\input{frontmatter/06_list_of_figures_tables}
+\input{frontmatter/07_abbreviations}
+\newpage
+
+% ---------------------------------------------------------------- Chapters (arabic numerals)
+\pagenumbering{arabic}
+
+\include{chapters/08_introduction}
+\include{chapters/09_background}
+\include{chapters/10_design_control_vision}
+\include{chapters/11_simulation_validation}
+\include{chapters/12_results}
+\include{chapters/13_conclusion}
+
+% ---------------------------------------------------------------- Back matter
+\include{backmatter/14_references}
+
+\ifwithappendix                         % switch: withappendix in info.txt
+  \include{backmatter/15_appendix}
+\fi
+
+\end{document}

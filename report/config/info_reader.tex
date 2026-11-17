@@ -1,0 +1,32 @@
+% ======================================================================
+% info_reader.tex: reads info.txt (DO NOT EDIT)
+% Turns each "key = value" line of info.txt into a macro named after the key, e.g. \thesistitle.
+% To add a new setting: add a line to info.txt (newkey = ...) and use \newkey where you want it.
+% Values are read as plain text, so & % # _ { } need no escaping there.
+% ======================================================================
+
+\newif\ifwithappendix
+\IfFileExists{info.txt}{\def\infofile{info.txt}}{\def\infofile{../info.txt}}
+\ExplSyntaxOn
+\ior_new:N \g__info_ior
+\tl_new:N \l__info_key_tl
+\tl_new:N \l__info_val_tl
+\seq_new:N \l__info_parts_seq
+\ior_open:Nn \g__info_ior { \infofile }
+\ior_str_map_inline:Nn \g__info_ior
+  {
+    % lines that are not "key = value" (comments, blanks) simply do not match
+    \regex_extract_once:nnNT { \A \s* (\w+) \s* = \s* (.*) \Z } { #1 } \l__info_parts_seq
+      {
+        \tl_set:Nx \l__info_key_tl { \seq_item:Nn \l__info_parts_seq { 2 } }
+        \tl_set:Nx \l__info_val_tl { \seq_item:Nn \l__info_parts_seq { 3 } }
+        % drop a trailing comment (a # at the start of the value or after a space), then trailing spaces
+        \regex_replace_once:nnN { (\A | \s) \# .* } { } \l__info_val_tl
+        \regex_replace_once:nnN { \s+ \Z } { } \l__info_val_tl
+        \str_if_eq:VnTF \l__info_key_tl { withappendix }
+          { \use:c { withappendix \l__info_val_tl } }
+          { \cs_gset_nopar:cpx { \l__info_key_tl } { \exp_not:V \l__info_val_tl } }
+      }
+  }
+\ior_close:N \g__info_ior
+\ExplSyntaxOff

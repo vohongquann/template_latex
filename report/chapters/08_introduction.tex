@@ -1,0 +1,110 @@
+% ======================================================================
+% 08_introduction.tex: CHAPTER 1, introduction
+% WHAT TO WRITE
+%   Rationale: why the topic matters and what problem exists.
+%   Scientific and Practical Significance: what is new and who benefits.
+%   Objectives: the general goal and a list of specific objectives (the list below is a bullet list).
+%   Object and Scope: what is studied and what is not.
+%   Research Methods: how the work is done.
+%   Thesis Structure: one line per chapter. The \ref{chap:...} give the chapter numbers automatically.
+%
+% HOW TO USE THIS FILE
+%   - Replace every ... with your text. A new paragraph starts after one blank line.
+%   - The title in \chapter{...} is printed as "CHAPTER n: TITLE" in capitals. Rename it freely.
+%   - \section{...} and \subsection{...} are numbered automatically (1.1, 1.1.1). Rename, copy or delete them.
+%   - \paragraph{Small heading:} gives a bold line of its own (the colon is required).
+%   - The last section ("Template Examples") shows a figure, an equation and a table. Copy a block into your
+%     text, edit it, then delete the "Template Examples" section when you no longer need it.
+%   - Syntax for everything (lists, figures, tables, equations, citations): docs/LATEX_CHEATSHEET.md
+%   - Labels (\label{...}) must be unique across the whole report.
+% ======================================================================
+
+\chapter{INTRODUCTION}
+\label{chap:introduction}
+
+\section{Rationale}
+...
+
+\section{Scientific and Practical Significance}
+...
+
+\section{Objectives}
+General objective: ...
+
+Specific objectives:
+\begin{itemize}
+    \item ...
+    \item ...
+    \item ...
+\end{itemize}
+
+\section{Object and Scope}
+...
+
+\section{Research Methods}
+...
+
+\section{Thesis Structure}
+The thesis has the following chapters:
+\begin{enumerate}
+    \item Chapter~\ref{chap:introduction}: ...
+    \item Chapter~\ref{chap:background}: ...
+    \item Chapter~\ref{chap:design}: ...
+    \item Chapter~\ref{chap:experiments}: ...
+    \item Chapter~\ref{chap:results}: ...
+    \item Chapter~\ref{chap:conclusion}: ...
+\end{enumerate}
+
+% ============================================================
+% Template examples: copy these blocks into the relevant subsection.
+% Replace placeholder text, captions, labels, and sample data as needed.
+% ============================================================
+\section{Template Examples}
+\label{sec:template-ch1-introduction}
+
+\subsection{Figure and Cross-Reference Example}
+...
+
+Figure~\ref{fig:template-ch1-introduction} illustrates ...
+\begin{figure}[htbp]
+    \centering
+    % Replace the framed placeholder with your image, for example:
+    % \includegraphics[width=0.75\linewidth]{figures/example.png}
+    \fbox{%
+        \begin{minipage}[c][4cm][c]{0.75\linewidth}
+            \centering
+            ...
+        \end{minipage}%
+    }
+    \caption{...}
+    \label{fig:template-ch1-introduction}
+\end{figure}
+
+\subsection{Equation Example}
+...
+
+An example relationship is given in Equation~\eqref{eq:template-ch1-introduction}:
+\begin{equation}
+    y(t) = a\,x(t) + b,
+    \label{eq:template-ch1-introduction}
+\end{equation}
+where $x(t)$ is the input, $y(t)$ is the output, and $a$ and $b$ are
+example coefficients. Replace this relationship and its definitions with ...
+
+\subsection{Table Example}
+...
+
+Table~\ref{tab:template-ch1-introduction} presents ...
+\begin{table}[htbp]
+    \centering
+    \caption{...}
+    \label{tab:template-ch1-introduction}
+    \begin{tabularx}{0.9\linewidth}{lXX}
+        \toprule
+        \textbf{Item} & \textbf{Description} & \textbf{Value / Unit} \\
+        \midrule
+        ... & ... & ... \\
+        ... & ... & ... \\
+        \bottomrule
+    \end{tabularx}
+\end{table}

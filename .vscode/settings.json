@@ -1,0 +1,10 @@
+{
+  "latex-workshop.latex.outDir": "%DIR%/build",
+  "latex-workshop.latex.recipe.default": "first",
+  "latex-workshop.latex.recipes": [
+    { "name": "latexmk (uses .latexmkrc)", "tools": ["latexmk"] }
+  ],
+  "latex-workshop.latex.tools": [
+    { "name": "latexmk", "command": "latexmk", "args": ["%DOC_EXT%"] }
+  ]
+}

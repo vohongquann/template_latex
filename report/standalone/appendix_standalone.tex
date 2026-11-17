@@ -1,0 +1,18 @@
+% !TeX program = xelatex
+% ======================================================================
+% appendix_standalone.tex: builds ONLY the appendix as its own PDF
+% (some schools want the appendix uploaded separately from the thesis).
+%   Build:  cd standalone  then  xelatex appendix_standalone.tex   (run twice)
+%   It uses the same info.txt, preamble and backmatter/15_appendix.tex as the main report.
+%   Not needed otherwise: delete the whole standalone/ folder if you do not use it.
+% ======================================================================
+\documentclass[12pt]{report}
+\input{../config/info_reader}
+\input{../config/00_preamble}
+
+\begin{document}
+
+\pagenumbering{arabic}
+\input{../backmatter/15_appendix}
+
+\end{document}

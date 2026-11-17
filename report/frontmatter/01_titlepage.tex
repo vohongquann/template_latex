@@ -1,0 +1,58 @@
+% ======================================================================
+% 01_titlepage.tex: the cover page (printed twice: hard cover and soft cover)
+% DO NOT EDIT THE TEXT HERE. Every name on the cover comes from info.txt:
+%   \ministry, \universitylineone/two, \faculty, \thesistype, \thesistitle,
+%   \supervisor, \authorname, \studentid, \studentclass, \cohort, \coverdate.
+% To change a name, edit the matching line in info.txt.
+% Images: figures/border_frame.png (page border) and figures/logo.jpg (logo).
+%   Replace figures/logo.jpg with your own logo, keeping the file name (any size, it is scaled to 35% of the text width).
+% To change sizes or spacing on the cover, edit the \fontsize{..}{..} values and the [..cm] gaps below.
+% The \newgeometry line gives equal left and right margins so the text is centred inside the border.
+% ======================================================================
+
+\newgeometry{left=20mm, right=20mm}
+
+\begin{titlepage}
+    \centering
+
+    % Border image, inset 7 mm from each paper edge.
+    \begin{tikzpicture}[remember picture, overlay]
+        \node at (current page.center) {%
+            \includegraphics[
+                width=\dimexpr\paperwidth-14mm\relax,
+                height=\dimexpr\paperheight-14mm\relax
+            ]{figures/border_frame.png}%
+        };
+    \end{tikzpicture}
+
+    % ---- Institution ----
+    {\fontsize{14pt}{16pt}\selectfont\textbf{\ministry}}\\[0.25cm]
+    {\fontsize{14pt}{18pt}\selectfont
+        \textbf{\universitylineone}\\
+        \textbf{\universitylinetwo}}\\[0.25cm]
+    {\fontsize{13pt}{15pt}\selectfont\textbf{————————————}}\\[0.5cm]
+    {\fontsize{16pt}{18pt}\selectfont\textbf{\faculty}}\\[1.2cm]
+
+    \includegraphics[width=0.35\textwidth]{figures/logo.jpg}\\[2cm]
+
+    % ---- Thesis ----
+    {\fontsize{30pt}{34pt}\selectfont\textbf{\thesistype}}\\[0.8cm]
+    {\fontsize{16pt}{20pt}\selectfont\textbf{\thesistitle}}\\[2.1cm]
+
+    % ---- Supervisor and student ----
+    {\fontsize{13pt}{15pt}\selectfont
+    \begin{tabular}{@{}l l@{}}
+        \textbf{Supervisor:} & \textbf{\supervisor} \\
+        \textbf{Student:} &
+        \begin{tabular}[t]{@{}l l@{}}
+            \textbf{\authorname}            & \quad \textbf{Student ID: \studentid} \\
+            \textbf{Class: \studentclass}   & \quad \textbf{Cohort: \cohort}
+        \end{tabular}
+    \end{tabular}}
+
+    \vfill
+
+    {\fontsize{13pt}{14pt}\selectfont\textbf{\coverdate}}\\[0.3cm]
+\end{titlepage}
+
+\restoregeometry

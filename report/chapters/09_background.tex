@@ -1,0 +1,113 @@
+% ======================================================================
+% 09_background.tex: CHAPTER 2, theoretical background
+% WHAT TO WRITE
+%   The theory the reader needs to follow your work: concepts, models, formulas, algorithms.
+%   One \section per topic, one \subsection per sub-topic. Cite sources with \cite{key} (keys are in
+%   backmatter/14_references.tex). Number important formulas with the equation environment and refer to them with \eqref{...}.
+%   The last section shows how to cite and how to show code.
+%
+% HOW TO USE THIS FILE
+%   - Replace every ... with your text. A new paragraph starts after one blank line.
+%   - The title in \chapter{...} is printed as "CHAPTER n: TITLE" in capitals. Rename it freely.
+%   - \section{...} and \subsection{...} are numbered automatically (1.1, 1.1.1). Rename, copy or delete them.
+%   - \paragraph{Small heading:} gives a bold line of its own (the colon is required).
+%   - The last section ("Template Examples") shows a figure, an equation and a table. Copy a block into your
+%     text, edit it, then delete the "Template Examples" section when you no longer need it.
+%   - Syntax for everything (lists, figures, tables, equations, citations): docs/LATEX_CHEATSHEET.md
+%   - Labels (\label{...}) must be unique across the whole report.
+% ======================================================================
+
+\chapter{THEORETICAL BACKGROUND}
+\label{chap:background}
+
+\section{Topic A}
+...
+
+\subsection{Concept}
+...
+
+\subsection{Types and classification}
+...
+
+\subsection{Working principle}
+...
+
+\section{Topic B}
+...
+
+\subsection{Mathematical model}
+...
+
+\subsection{Notation}
+...
+
+\section{Topic C}
+...
+
+\subsection{Method}
+...
+
+\subsection{Algorithm}
+...
+
+\section{Citations and Code}
+A reference is cited with a key from \texttt{backmatter/14\_references.tex}, for example \texttt{\textbackslash cite\{key\}} gives \cite{example_article}.
+Source code is shown with the \texttt{pythoncode} environment:
+\begin{pythoncode}
+def f(x):
+    return 2 * x
+\end{pythoncode}
+
+% ============================================================
+% Template examples: copy these blocks into the relevant subsection.
+% Replace placeholder text, captions, labels, and sample data as needed.
+% ============================================================
+\section{Template Examples}
+\label{sec:template-ch2-background}
+
+\subsection{Figure and Cross-Reference Example}
+...
+
+Figure~\ref{fig:template-ch2-background} illustrates ...
+\begin{figure}[htbp]
+    \centering
+    % Replace the framed placeholder with your image, for example:
+    % \includegraphics[width=0.75\linewidth]{figures/example.png}
+    \fbox{%
+        \begin{minipage}[c][4cm][c]{0.75\linewidth}
+            \centering
+            ...
+        \end{minipage}%
+    }
+    \caption{...}
+    \label{fig:template-ch2-background}
+\end{figure}
+
+\subsection{Equation Example}
+...
+
+An example relationship is given in Equation~\eqref{eq:template-ch2-background}:
+\begin{equation}
+    y(t) = a\,x(t) + b,
+    \label{eq:template-ch2-background}
+\end{equation}
+where $x(t)$ is the input, $y(t)$ is the output, and $a$ and $b$ are
+example coefficients. Replace this relationship and its definitions with ...
+
+\subsection{Table Example}
+...
+
+Table~\ref{tab:template-ch2-background} presents ...
+\begin{table}[htbp]
+    \centering
+    \caption{...}
+    \label{tab:template-ch2-background}
+    \begin{tabularx}{0.9\linewidth}{lXX}
+        \toprule
+        \textbf{Item} & \textbf{Description} & \textbf{Value / Unit} \\
+        \midrule
+        ... & ... & ... \\
+        ... & ... & ... \\
+        \bottomrule
+    \end{tabularx}
+\end{table}

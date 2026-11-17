@@ -1,0 +1,26 @@
+% ======================================================================
+% 14_references.tex: references (bibliography)
+% HOW TO USE
+%   - One \bibitem{key} per source. The key is a short unique name you invent, such as smith2024.
+%     Cite it anywhere in the text with \cite{smith2024}. Numbers [1], [2], ... follow the order of first citation.
+%   - List only sources you actually cite. Delete the two examples below when you add your own.
+%   - Templates to copy (IEEE style):
+%       Article : A. Author and B. Author, ``Title,'' \emph{Journal}, vol.~1, no.~2, pp.~10--20, 2024. doi: ...
+%       Book    : A. Author, \emph{Book Title}, 2nd ed. City, Country: Publisher, 2020.
+%       Website : Organization, \emph{Page title}, 2021. [Online]. Available: \url{https://...}
+%       Thesis  : A. Author, ``Title,'' B.Eng. thesis, Dept., University, City, 2015.
+%   - The number in \begin{thebibliography}{99} only sets the label width: keep 99 (up to 99 entries).
+% ======================================================================
+
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{References}
+
+\bibitem{example_article}
+A. Author and B. Author, ``Article title,'' \emph{Journal Name}, vol.~1, no.~2,
+pp.~10--20, 2024. doi: 10.0000/xxxx.
+
+\bibitem{example_web}
+Organization, \emph{Document title}, 2021. [Online]. Available:
+\url{https://example.com}.
+
+\end{thebibliography}

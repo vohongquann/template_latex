@@ -1,0 +1,47 @@
+# ======================================================================
+# info.txt: every name and detail of the report, in ONE place.
+#
+# FORMAT       key = value   # comment
+#   - Replace only the ... (the value). Never rename the key on the left.
+#   - The comment after # tells you what to write (an example). It is ignored by the build.
+#   - A "#" that follows a space starts a comment. To print a # in a value, write it right after
+#     a letter with no space before it (A#1 works, A #1 does not).
+#   - Type & % _ { } and accents as normal text. No LaTeX needed.
+#   - Do not delete lines: a missing key makes the build stop with "Undefined control sequence".
+#   - Empty value is allowed:  universitylinetwo =
+#   - To add your own setting: add a line  mykey = ...  (letters only, no digits or underscores)
+#     and use \mykey anywhere in the .tex files.
+#
+# AFTER EDITING  run latexmk again (or press build in your editor).
+#
+# WHERE EACH VALUE APPEARS
+#   cover page (frontmatter/01_titlepage.tex)   : ministry ... coverdate
+#   commitment page (frontmatter/03_commitment.tex): thesistitle, supervisor, authorname,
+#                                                  studentid, studentclass, phone, email, submissiondate
+#   PDF properties (title, author)              : thesistitle, authorname
+#   options                                     : assignmentpdf, assignmenttitle, withappendix (main.tex),
+#                                                  hyperlinkcolor (links, citations, URLs everywhere)
+# ======================================================================
+
+ministry          = ...   # MINISTRY OF EDUCATION AND TRAINING
+universitylineone = ...   # HO CHI MINH CITY UNIVERSITY
+universitylinetwo = ...   # OF TECHNOLOGY AND ENGINEERING (may be empty)
+faculty           = ...   # FACULTY OF MECHANICAL ENGINEERING
+
+thesistype        = ...   # GRADUATION THESIS
+thesistitle       = ...   # title: cover, commitment, PDF properties
+submissiondate    = ...   # 15 July 2026 (commitment page)
+coverdate         = ...   # Ho Chi Minh City, July 2026 (cover bottom)
+
+supervisor        = ...   # Dr. Nguyen Van A
+authorname        = ...   # NGUYEN VAN B (also PDF author)
+studentid         = ...   # 22134012
+studentclass      = ...   # 22134A
+cohort            = ...   # 2022-2026
+phone             = ...   # 0900000000
+email             = ...   # name@example.com
+
+assignmentpdf     = assignment.pdf                 # scanned assignment sheet: put the PDF next to main.tex with this name; no file = page skipped
+assignmenttitle   = GRADUATION THESIS ASSIGNMENT   # its entry in the table of contents
+hyperlinkcolor    = NavyBlue                        # color of links, citations and URLs: NavyBlue (screen) or black (print)
+withappendix      = false                          # true = add the appendix (backmatter/15_appendix.tex) after the references, false = leave it out
